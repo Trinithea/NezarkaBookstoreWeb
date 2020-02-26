@@ -51,7 +51,7 @@ namespace NezarkaBookstoreWeb {
 			}
 			item.Count++;
 		}
-
+		public void m() { }
 		public bool Remove(Book book) {
 			var item = Items.Find(i => i.BookId == book.Id);
 			if (item == null) {

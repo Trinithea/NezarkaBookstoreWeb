@@ -6,14 +6,14 @@ using System.IO;
 
 namespace NezarkaBookstoreWeb {
 
-	class Book {
+	public class Book {
 		public int Id { get; set; }
 		public string Title { get; set; }
 		public string Author { get; set; }
 		public decimal Price { get; set; }
 	}
 
-	class Customer {
+	public class Customer {
 		private ShoppingCart shoppingCart;
 
 		public int Id { get; set; }
@@ -32,14 +32,22 @@ namespace NezarkaBookstoreWeb {
 				shoppingCart = value;
 			}
 		}
+
+		public override string ToString()
+		{
+			if(DateJoined == null)
+				return String.Format("{0} {1} since always",FirstName,LastName);
+			else
+				return String.Format("{0} {1} since {2}", FirstName, LastName, DateJoined.Value.Year);
+		}
 	}
 
-	class ShoppingCartItem {
+	public class ShoppingCartItem {
 		public int BookId { get; set; }
 		public int Count { get; set; }
 	}
 
-	class ShoppingCart {
+	public class ShoppingCart {
 		public int CustomerId { get; set; }
 		public List<ShoppingCartItem> Items = new List<ShoppingCartItem>();
 

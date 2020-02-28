@@ -5,10 +5,9 @@ using System.Text;
 using System.IO;
 
 namespace NezarkaBookstoreWeb {
-
-	class ModelStore {
+	public class ModelStore {
 		private List<Book> books = new List<Book>();
-		private List<Customer> customers = new List<Customer>();
+		public List<Customer> customers = new List<Customer>();
 
 		public IList<Book> GetBooks() {
 			return books;

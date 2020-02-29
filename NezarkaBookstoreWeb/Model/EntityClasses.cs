@@ -38,7 +38,7 @@ namespace NezarkaBookstoreWeb {
 			if(DateJoined == null)
 				return String.Format("{0} {1} since always",FirstName,LastName);
 			else
-				return String.Format("{0} {1} since {2}", FirstName, LastName, DateJoined.Value.Year);
+				return String.Format("{0} {1} since year {2}", FirstName, LastName, DateJoined.Value.Year);
 		}
 	}
 
